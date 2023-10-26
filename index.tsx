@@ -1,22 +1,43 @@
 import React from 'react';
-import { View, TouchableOpacity, Text, StyleSheet, ScrollView } from 'react-native';
+import {
+  View,
+  TouchableOpacity,
+  Text,
+  StyleSheet,
+  ScrollView,
+  ViewStyle,
+  TextStyle,
+} from 'react-native';
 
-interface AppProps {
-  buttonArray: string[];
-  onPressCallback: (value: string, index: Number) => void;
+interface ChoiceProps {
+  buttonArray: Array<{
+    id: number;
+    name: string;
+  }>;
+  customTextStyle?: TextStyle;
+  customButtonStyle?: ViewStyle;
+  customContainerStyle?: ViewStyle;
+  onPressCallback: (name: string, id: number) => void; // Define the callback function
 }
 
-const App: React.FC<AppProps> = ({ buttonArray, onPressCallback }) => {
+const Choice: React.FC<ChoiceProps> = ({
+  buttonArray = [{ name: 'Empty', id: 1 }],
+  customTextStyle,
+  onPressCallback,
+  customButtonStyle,
+  customContainerStyle,
+}) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, customContainerStyle]}>
       <ScrollView contentContainerStyle={styles.buttonContainer}>
-        {buttonArray.map((value, index) => (
+        {buttonArray.map(({ id, name }, index) => (
           <TouchableOpacity
             key={index}
-            style={styles.button}
-            onPress={() => onPressCallback(value, index)}
-          >
-            <Text style={styles.buttonText}>{value}</Text>
+            style={[styles.button, customButtonStyle]}
+            onPress={() => onPressCallback(name, id)}> {/* Call the callback with name and id */}
+            <Text style={[styles.buttonText, customTextStyle]}>
+              {name}
+            </Text>
           </TouchableOpacity>
         ))}
       </ScrollView>
@@ -27,19 +48,21 @@ const App: React.FC<AppProps> = ({ buttonArray, onPressCallback }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
+    justifyContent: 'center',
   },
   buttonContainer: {
-    flexDirection: 'row',
     flexWrap: 'wrap',
+    flexDirection: 'row',
     justifyContent: 'center',
   },
   button: {
     margin: 5,
-    padding: 10,
-    backgroundColor: 'blue',
     borderRadius: 5,
+    paddingLeft: 7.5,
+    paddingRight: 7.5,
+    paddingVertical: 2.5,
+    backgroundColor: 'blue',
   },
   buttonText: {
     color: 'white',
@@ -47,4 +70,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default Choice;
