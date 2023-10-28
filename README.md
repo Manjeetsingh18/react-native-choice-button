@@ -14,16 +14,29 @@ import ChoiceButton from 'react-native-choice-button'
 ## Usage
 
 ```javascript
-    const data = [{id: 1, name: '1bc'}]
+    const fruits = [
+          { id: 1, name: "Apple" },
+          { id: 2, name: "Banana" },
+          { id: 3, name: "Orange" },
+          { id: 4, name: "Mango" },
+          { id: 5, name: "Strawberry" },
+          { id: 6, name: "Grapes" },
+          { id: 7, name: "Kiwi" },
+          { id: 8, name: "Pineapple" },
+          { id: 9, name: "Cherry" },
+          { id: 10, name: "Watermelon" },
+    ];
+
+
     <ChoiceButton  
-        data={data}
+        data={fruits}
         onPressCallback={(name, id) => {
           console.log(`Button pressed: name=${name}, id=${id}`);
         }}
     />
 ```
 
-## Example
+## Images
 <table>
    <tr>
       <td>
