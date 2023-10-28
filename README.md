@@ -23,6 +23,11 @@ import ChoiceButton from 'react-native-choice-button'
     />
 ```
 
+## Example
+
+<img src="./assets/default-button.png" width="100"/>
+<img src="./assets/selected-button.png" width="100"/>
+
 ## API
 
 | Prop | Type | Description |
@@ -31,3 +36,20 @@ import ChoiceButton from 'react-native-choice-button'
 | ``customContainerStyle`` | ``ViewStyle`` | The StyleSheet to apply to the root view |
 | ``customButtonStyle`` | ``ViewStyle`` | The StyleSheet to apply to the button view |
 | ``customTextStyle`` | ``TextStyle`` | The StyleSheet to apply to the text |
+| ``width`` | ``number`` |                                 |
+| ``height`` | ``number`` |                                |
+| ``bgColor`` | ``string`` |                               |
+| ``fontSize`` | ``number`` |                              |
+| ``fontFamily`` | ``string`` |                            |
+| ``borderColor`` | ``string`` |                           |
+| ``borderWidth`` | ``number`` |                           |
+| ``borderRadius`` | ``number`` |                          |
+| ``marginVertical`` | ``number`` |                        |
+| ``selectedBgColor`` | ``string`` |                       |
+| ``selectedBdColor`` | ``string`` |                       |
+| ``paddingVertical`` | ``number`` |                       |
+| ``borderRadius`` | ``number`` |                          |
+| ``marginHorizontal`` | ``number`` |                      |
+| ``defaultTextColor`` | ``string`` |                      |
+| ``selectedTextColor`` | ``string`` |                     |
+| ``paddingHorizontal`` | ``number`` |                     |

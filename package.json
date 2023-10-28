@@ -1,6 +1,6 @@
 {
   "name": "react-native-choice-button",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.tsx",
   "scripts": {
@@ -14,6 +14,16 @@
     "type": "git",
     "url": "git+https://github.com/manjeetsingh18/react-native-choice-button.git"
   },
+  "keywords": [
+    "react-native-choice-button",
+    "react-native",
+    "ios",
+    "android",
+    "windows",
+    "button",
+    "multi-buttons",
+    "option"
+  ],
   "author": "Manjeet Singh",
   "license": "ISC",
   "bugs": {
