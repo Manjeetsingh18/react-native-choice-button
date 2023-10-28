@@ -25,8 +25,8 @@ import ChoiceButton from 'react-native-choice-button'
 
 ## Example
 
-<img src="./assets/default-button.png" width="100"/>
-<img src="./assets/selected-button.png" width="100"/>
+<img src="./assets/default-button.png" width="320" height="240"/>
+<img src="./assets/selected-button.png" width="320" height="240"/>
 
 ## API
 
