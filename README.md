@@ -16,7 +16,7 @@ import ChoiceButton from 'react-native-choice-button'
 ```javascript
     const data = [{id: 1, name: '1bc'}]
     <ChoiceButton  
-        buttonArray={data}
+        data={data}
         onPressCallback={(name, id) => {
           console.log(`Button pressed: name=${name}, id=${id}`);
         }}
@@ -24,9 +24,16 @@ import ChoiceButton from 'react-native-choice-button'
 ```
 
 ## Example
-
-<img src="./assets/default-button.png" width="320" height="240"/>
-<img src="./assets/selected-button.png" width="320" height="240"/>
+<table>
+   <tr>
+      <td>
+          <img src="./assets/default-button.png" width="320" height="240" style="margin-left:10px" />
+      </td>
+      <td>
+          <img src="./assets/selected-button.png" width="320" height="240" style="margin-left:10px" />
+      </td>
+    </tr>
+</table>
 
 ## API
 
